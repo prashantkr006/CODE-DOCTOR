@@ -1,113 +1,144 @@
-import Image from 'next/image'
+"use client";
+import Image from "next/legacy/image";
+import logo from "../public/images/logo 1.svg";
+import landingImg from "../public/images/landing-img.svg";
+import Card from "./components/Card";
+import FancyCard from "./components/fancyCard";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
+    <main className="py-4">
+      <div className="flex mx-4 justify-between items-center">
+          <Image src={logo} alt="logo"  />
+        <div className="border border-white rounded-full p-5 h-12 w-112 text-white uppercase flex items-center justify-center">
+          XEROCODEE d
+        </div>
+      </div>
+      <div className="h-px bg-white sm:w-screen w-screen"></div>
+      <div className="flex flex-col justify-evenly items-center w-screen my-8">
+        <span className="text-4xl text-center font-semibold gradient-text my-4">
+          Integrate AI Throughout Your Workflow
+        </span>
+        <span className="text-6xl text-center font-normal text-white my-4">
+          Code Doctor
+        </span>
+        <p className="text-white text-center font-sans leading-10 text-xl my-4">
+          Make processes where AI collaborates with your team throughout the
+          whole development process.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+      </div>
+
+      {/*Input Box */}
+      <div className="flex justify-center">
+        <div className="flex m-4 p-1 w-9/12 rounded-full max-w-sm bg-gradient-to-r from-pink-500 via-rose-500 to-indigo-500">
+          <div className="relative flex flex-grow">
+            <input
+              className="p-4 h-16 w-full rounded-full text-white focus:outline-none bg-black"
+              type="text"
+              id="name"
+              placeholder="Your Email"
             />
-          </a>
+            <button className="absolute h-10 top-1/2 right-0 transform -translate-y-1/2 border-white border-2 rounded-full px-4 text-white mr-4">
+              Join Waitlist
+            </button>
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <div className="w-full ">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={landingImg}
+          layout="responsive"
+          objectFit="cover"
+          alt="landing img"
+          className="w-full h-auto"
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <h2 className="font-semibold text-transparent text-6xl bg-clip-text text-center bg-gradient-to-r from-indigo-600 to-fuchsia-400 my-4">
+        Boost the speed of your development and test cycles.
+      </h2>
+      <p className="text-white text-center font-sans leading-10 text-xl my-4">
+        With AI-driven test case generation and code analysis, problems may be
+        found and fixed more quickly.
+      </p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      {/*Normal cards and animation */}
+      <div className="flex flex-col mx-4">
+        <div className="flex-1">
+          <Card data={["CI/CD Pipeline Generate", "Build / Deployment"]} />
+        </div>
+        <div className="flex-1 flex justify-end items-end">
+          <Card data={["Generate Test Cases", "Code Analysis"]} />
+        </div>
       </div>
+
+      <div className="flex justify-center m-8 space-x-8">
+        <FancyCard
+          title={"ask questions"}
+          description={
+            "To assist with managing the development, testing, and deployment process, ask it questions or issue instructions."
+          }
+          showButton={true}
+        />
+        <FancyCard
+          title={"execute"}
+          description={
+            "With a single command, you may run a series of tests or install a new version of a programme in a particular setting."
+          }
+          showButton={true}
+        />
+      </div>
+
+      <div className="flex justify-center my-8">
+        <FancyCard
+          title={
+            "Fix security concerns more quickly using generated code recommendations"
+          }
+          description={
+            "With the aid of AI, recognise any security risk and swiftly and effectively fix it. granting developers the freedom they require to protect their work frequently and early."
+          }
+        />
+      </div>
+
+      <div className="flex flex-col justify-evenly items-center w-screen my-4">
+        <span className="text-4xl text-center font-semibold gradient-text my-4">
+          Automate all aspects of your delivery process with AI support.
+        </span>
+        <span className="text-6xl text-center font-normal text-white my-4">
+          Get Early Access
+        </span>
+        <p className="text-white text-center font-sans leading-10 text-xl my-4">
+          Make processes where AI collaborates with your team throughout the
+          whole development process.
+        </p>
+      </div>
+
+      {/*Input Box */}
+      <div className="flex justify-center">
+        <div className="flex m-4 p-1 w-9/12 rounded-full max-w-sm bg-gradient-to-r from-pink-500 via-rose-500 to-indigo-500">
+          <div className="relative flex flex-grow">
+            <input
+              className="p-4 h-16 w-full rounded-full text-white focus:outline-none bg-black"
+              type="text"
+              id="name"
+              placeholder="Your Email"
+            />
+            <button className="absolute h-10 top-1/2 right-0 transform -translate-y-1/2 border-white border-2 rounded-full px-4 text-white mr-4">
+              Join Waitlist
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/*footer*/}
+      <span className="inline-flex justify-center w-screen">
+        <p className="text-white inline-flex text-xl">
+          Copyright © 2023{" "}
+          <span className="font-bold mx-1">EXOCODE TECHNOLOGIES</span> | All
+          rightsreserved
+        </p>
+      </span>
     </main>
-  )
+  );
 }
