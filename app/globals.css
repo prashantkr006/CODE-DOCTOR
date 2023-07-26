@@ -35,6 +35,16 @@
   background: linear-gradient(45deg, #aa50fb, #a6fcff);
 }
 
+.oval-shape {
+  position: absolute;
+  height: 150px;
+  width: 220px;
+  border-radius: 60% 40% 50% 50% / 59% 45% 55% 41%;
+  border: 4px solid rgba(151, 24, 219, 0.8);
+  box-shadow: inset 0px 0px 20px rgb(6, 134, 246), 0px 0px 20px rgb(158, 6, 246);
+  opacity: 0;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background));
@@ -44,3 +54,22 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+@media (min-width: 350px) {
+  .oval-shape {
+    /* Reduce the height and width when the screen width is 350px or larger */
+    height: 200px;
+    width: 250px;
+  }
+}
+
+
+@media (min-width: 680px) {
+  .oval-shape {
+    /* Reduce the height and width when the screen width is 350px or larger */
+    height: 250px;
+    width: 350px;
+  }
+}
+
+
