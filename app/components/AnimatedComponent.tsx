@@ -1,4 +1,3 @@
-import "../globals.css";
 import { useRef, useEffect, useState } from "react";
 import {
   motion,
@@ -14,7 +13,7 @@ function App(): JSX.Element {
   const [textShow1, setTextShow1] = useState<boolean>(true);
   const [textShow2, setTextShow2] = useState<boolean>(false);
   const [ovalRef, animate] = useAnimate();
-  
+
   useEffect(() => {
     const sequence = [
       [
@@ -38,11 +37,12 @@ function App(): JSX.Element {
       [ovalRef.current, { rotate: -520 }, { duration: 2, delay: 0 }],
       [ovalRef.current, { rotate: -600 }, { duration: 2, delay: 0 }],
       [ovalRef.current, { rotate: -730 }, { duration: 1, delay: 0 }],
-      [ovalRef.current, { scale: 1.3 }, { duration: 2, delay: 1 }],
+      [ovalRef.current, { scale: 1.3, opacity: 0 }, { duration: 3, delay: 1 }],
+      [ovalRef.current, { scale: 1 }, { duration: 1, delay: 0 }],
     ];
 
     //@ts-ignore
-    animate(sequence, { delay: 1 });
+    animate(sequence, { delay: 1, repeat: Infinity });
     setTimeout(() => {
       setTextShow1(false);
     }, 5000);

@@ -5,12 +5,18 @@ import landingImg from "../public/images/landing-img.svg";
 import Card from "./components/Card";
 import FancyCard from "./components/fancyCard";
 import AnimatedComponent from "./components/AnimatedComponent";
+import CustomInput from "./components/CustomInput";
 
 export default function Home() {
   return (
     <main className="flex flex-col py-4">
       <div className="flex mx-4 justify-between items-center">
-        <Image className="object-scale-down h-48 w-96" src={logo} alt="logo" />
+        <Image
+          className="object-scale-down h-48 w-96"
+          src={logo}
+          priority
+          alt="logo"
+        />
         <div className="border border-white rounded-full p-5 h-12 w-112 text-white uppercase flex items-center justify-center">
           XEROCODEE
         </div>
@@ -30,21 +36,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="flex justify-center">
-        <div className="flex m-4 sx:my-2 p-0.5 w-9/12 rounded-full max-w-sm bg-gradient-to-r from-pink-500 via-rose-500 to-indigo-500">
-          <div className="relative flex flex-grow">
-            <input
-              className="p-4 sm:h-16 sx:h-14 w-full rounded-full text-white focus:outline-none bg-black"
-              type="text"
-              id="name"
-              placeholder="Your Email"
-            />
-            <button className="absolute sm:h-10 sx:h-8 top-1/2 right-0 transform -translate-y-1/2 border-white sm:border-2 sx:border rounded-full px-4 text-white sm:text-lg sx:text-xs sm:mr-4 sx:mr-3">
-              Join Waitlist
-            </button>
-          </div>
-        </div>
-      </div>
+      <CustomInput />
 
       <div className="w-full ">
         <Image
@@ -114,23 +106,8 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="flex justify-center">
-        <div className="flex m-4 sx:my-2 p-0.5 w-9/12 rounded-full max-w-sm bg-gradient-to-r from-pink-500 via-rose-500 to-indigo-500">
-          <div className="relative flex flex-grow">
-            <input
-              className="p-4 sm:h-16 sx:h-14 w-full rounded-full text-white focus:outline-none bg-black"
-              type="text"
-              id="name"
-              placeholder="Your Email"
-            />
-            <button className="absolute sm:h-10 sx:h-8 top-1/2 right-0 transform -translate-y-1/2 border-white sm:border-2 sx:border rounded-full px-4 text-white sm:text-lg sx:text-xs sm:mr-4 sx:mr-3">
-              Join Waitlist
-            </button>
-          </div>
-        </div>
-      </div>
+      <CustomInput />
 
-      
       <span className="inline-flex justify-center w-screen mt-8">
         <p className="text-white text-center md:text-xl sx:text-sm">
           Copyright © 2023{" "}
