@@ -1,10 +1,10 @@
 <h1>Code-Doctor: Full Stack Next.js App</h1>
 
-<p>Code-Doctor is a full-stack web application developed as part of a Full Stack Developer Internship project. The application aims to provide a platform for users to submit their mail data, such as name and email address, and store the validated data in a database. The project is implemented using various technologies, including Next.js, React, TypeScript, Express.js, MongoDB, and Framer Motion for animations.</p>
+<p>Code-Doctor is a full-stack web application developed. The application aims to provide a platform for users to submit their mail data, and get added to the waitlist by storing the validated data in a database. The project is implemented using various technologies, including Next.js, React, TypeScript, Express.js, MongoDB, and Framer Motion for animations.</p>
 
 <h2>Frontend</h2>
 
-<p>The frontend of the application is built using Next.js, a React framework that offers server-side rendering and improved performance. TypeScript is incorporated into the project for better type safety and an enhanced developer experience. The design of the frontend is based on the provided Figma design, ensuring a consistent and visually appealing user interface.</p>
+<p>The front end of the application is built using Next.js, a React framework that offers server-side rendering and improved performance. TypeScript is incorporated into the project for better type safety and an enhanced developer experience. The design of the front is based on the provided Figma design, ensuring a consistent and visually appealing user interface.</p>
 
 <h3>Features</h3>
 
