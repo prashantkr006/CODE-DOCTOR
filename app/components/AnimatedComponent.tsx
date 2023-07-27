@@ -14,7 +14,7 @@ function App(): JSX.Element {
   const [textShow1, setTextShow1] = useState<boolean>(true);
   const [textShow2, setTextShow2] = useState<boolean>(false);
   const [ovalRef, animate] = useAnimate();
-
+  
   useEffect(() => {
     const sequence = [
       [
@@ -40,6 +40,8 @@ function App(): JSX.Element {
       [ovalRef.current, { rotate: -730 }, { duration: 1, delay: 0 }],
       [ovalRef.current, { scale: 1.3 }, { duration: 2, delay: 1 }],
     ];
+
+    //@ts-ignore
     animate(sequence, { delay: 1 });
     setTimeout(() => {
       setTextShow1(false);

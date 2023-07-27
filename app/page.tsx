@@ -53,6 +53,7 @@ export default function Home() {
           objectFit="cover"
           alt="landing img"
           className="w-full h-auto"
+          priority
         />
       </div>
 
